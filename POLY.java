@@ -21,5 +21,3 @@ public class Main {
         System.out.println("Name:"+m.getName());
         System.out.println("Age:"+m.getAge());
     }
-}
-https://dodo.quantumnique.tech/
