@@ -1,0 +1,32 @@
+java-dsa-learning/
+│── basics/
+│   ├── HelloWorld.java
+│   ├── Calculator.java
+│
+│── arrays/
+│   ├── LinearSearch.java
+│   ├── BinarySearch.java
+│   ├── BubbleSort.java
+│
+│── strings/
+│   ├── Palindrome.java
+│   ├── ReverseString.java
+│
+│── linkedlist/
+│   ├── SinglyLinkedList.java
+│   ├── DoublyLinkedList.java
+│
+│── stack_queue/
+│   ├── StackArray.java
+│   ├── QueueArray.java
+│   ├── CircularQueue.java
+│
+│── trees/
+│   ├── BinaryTreeTraversal.java
+│   ├── BST.java
+│
+│── graphs/
+│   ├── BFS.java
+│   ├── DFS.java
+│
+│── README.md   ← explains roadmap + progress
