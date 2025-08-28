@@ -140,3 +140,113 @@ class CircularSinglyList {
         System.out.println(); // Add newline at the end
     }
 }
+////2nd type
+import java.util.Scanner;
+
+public class Main {
+    
+    // Node class
+    static class Node {
+        int data;
+        Node next;
+        
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+    
+    // Circular Singly Linked List class
+    static class CircularSinglyList {
+        Node head;
+        Node tail;
+        
+        // Add node at the end
+        public void add(int data) {
+            Node newNode = new Node(data);
+            
+            if (head == null) {
+                head = newNode;
+                tail = newNode;
+                newNode.next = head; // Circular reference
+            } else {
+                tail.next = newNode;
+                tail = newNode;
+                tail.next = head; // Maintain circularity
+            }
+        }
+        
+        // Insert at beginning
+        public void insertAtBegin(int data) {
+            Node newNode = new Node(data);
+            
+            if (head == null) {
+                head = newNode;
+                tail = newNode;
+                newNode.next = head;
+            } else {
+                newNode.next = head;
+                head = newNode;
+                tail.next = head; // Update tail to point to new head
+            }
+        }
+        
+        // Display the circular list
+        public void display() {
+            if (head == null) {
+                System.out.println();
+                return;
+            }
+            
+            Node temp = head;
+            boolean first = true;
+            do {
+                if (!first) {
+                    System.out.print(" ");
+                }
+                System.out.print(temp.data);
+                first = false;
+                temp = temp.next;
+            } while (temp != head);
+            System.out.println();
+        }
+    }
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        try {
+            // Read the first integer (number of elements)
+            if (!sc.hasNextInt()) {
+                System.out.println();
+                return;
+            }
+            int n = sc.nextInt();
+            
+            CircularSinglyList cl = new CircularSinglyList();
+            
+            // Read n integers and add to list
+            for (int i = 0; i < n; i++) {
+                if (!sc.hasNextInt()) {
+                    break; // Stop if no more integers
+                }
+                int value = sc.nextInt();
+                cl.add(value);
+            }
+            
+            // Read the integer to insert at beginning
+            if (sc.hasNextInt()) {
+                int x = sc.nextInt();
+                cl.insertAtBegin(x);
+            }
+            
+            // Display the list
+            cl.display();
+            
+        } catch (Exception e) {
+            System.out.println();
+        } finally {
+            sc.close();
+        }
+    }
+}
