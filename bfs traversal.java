@@ -21,4 +21,25 @@ public class Main {
     }
   }
     
+  for(int=0;i<edges;i++){
+    system.ou.print("enter (u v):");
+    int u =sc.nextInt();
+      int v=sc.nextInt();
+//*""
+???????????????????????
   
+
+              ??    ""*//
+    while(front<rear){
+      int current =queue[front++];
+      sysytem.outprint(current +" ");
+
+    for(int i= 0; i <n;i++){
+      if(adjMatrix[current][i])== 1 && !visited[i]){
+        visited[i]=true;
+        queue[rear++]=i;
+      }
+    }
+    }
+  }
+  }
