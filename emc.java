@@ -1,10 +1,10 @@
 import java.util.Scanner;
 class Main{
-public static void main(String[] args){
-Scanner scan = new  Scanner(System.in);
-String name= scan.nextLine();
-int age = scan.nextInt();
+public static void main(Strin args[]){
+Scanner Scan = new  Scanner(System.in);
+String name= Scan.nextLine();
+int age = Scan.nextInt();
 System.out.println("name:"+name);
-System.out.println("age:"+ age);
+System.out.println("age:"+age);
 }
 }
